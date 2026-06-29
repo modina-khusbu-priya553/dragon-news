@@ -9,6 +9,7 @@ const layout = ({ children }) => {
             <Header></Header>
             <BreakingNews></BreakingNews>
             <Navbar></Navbar>
+            {children}
             
         </div>
     );
