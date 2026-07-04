@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 const RightSidebar = () => {
     return (
         <div className='space-y-2'>
-            <h2>Login with</h2>
+            <h2 className='text-2xl font-bold'>Login with</h2>
 
             <div className='flex flex-col gap-2'>
                 <button className="btn bg-white text-blue-400 border-blue-200">
