@@ -8,6 +8,7 @@ import { newsCategoriesData } from "@/lib/newsData"
 
 // news for all news based on id
 import {newsAllData} from "@/lib/newsData";
+import NewsCard from '@/components/homePage/news/NewsCard';
 
 const NewsCategoryPage = async ({params}) => {
     const {categoryId} = await params;
@@ -28,7 +29,7 @@ const NewsCategoryPage = async ({params}) => {
         <h2 className="text-2xl font-bold mb-4">Dragon News Home</h2>
         <div className="grid grid-cols-1 gap-4">
           { allNews.length > 0 ?
-          (allNews.map(news => {return <div key={news._id}>{news.title}</div>})):
+          (allNews.map(news => {return <NewsCard key={news._id} news={news}></NewsCard>})):
           (<div className="text-center text-2xl font-bold">No news found</div>)
           }
         </div>
