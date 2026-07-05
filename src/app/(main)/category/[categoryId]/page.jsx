@@ -1,11 +1,8 @@
 import React from 'react';
 import LeftSidebar from "@/components/homePage/news/LeftSidebar";
 import RightSidebar from "@/components/homePage/news/RightSidebar";
-
-
 // News for leftSidebar
 import { newsCategoriesData } from "@/lib/newsData"
-
 // news for all news based on id
 import {newsAllData} from "@/lib/newsData";
 import NewsCard from '@/components/homePage/news/NewsCard';

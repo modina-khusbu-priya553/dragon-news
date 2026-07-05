@@ -52,7 +52,7 @@ const NewsCard = ({ news }) => {
                 </figure>
                 <div className="card-body">
                     <p className="text-[#706F6F] text-lg line-clamp-3">{details}</p>
-                    <Link className="text-2xl text-orange-400 font-bold" href={`/news/${news.id}`}>Read More</Link>
+                    <Link className="text-2xl text-orange-400 font-bold" href={`/news/${news._id}`}>Read More</Link>
                 </div>
                 
                 <div className="card-body">
