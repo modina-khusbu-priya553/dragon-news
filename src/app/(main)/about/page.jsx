@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: "About us",
+  description: "Best news portal in Bangladesh",
+};
+
 const AboutPage = () => {
     return (
         <div>
