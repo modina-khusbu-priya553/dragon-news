@@ -24,6 +24,7 @@ const RegisterPage = () => {
 
         if (res) {
             alert("Sign up successful!");
+            router.push("/");
         }
 
     }
