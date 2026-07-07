@@ -1,13 +1,34 @@
 "use client";
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from "react-hook-form";
 
-const LoginPage = () => {
+const LoginPage =  () => {
+
+    // useForm hook from react-hook-form to handle form state and validation
     const { register, handleSubmit, formState: { errors } } = useForm();
 
+    // handleLogin function to handle form submission and get form data
+    const handleLogin = async(data) => {
+        const {email, password} = data;
 
-    const handleLogin = (data) => {console.log(data)}
+        // Using the authClient to sign in with email and password and set the data into MongoDB database
+        const { data: res, error } = await authClient.signIn.email({
+            email: email, // required
+            password: password, // required
+            rememberMe: true,
+            callbackURL: "/",
+        });
+        if (error) {
+            alert(error.message);
+        }
+
+        if (res) {
+            alert("Login successful!");
+        }
+
+    }
     return (
         <div className="flex justify-center items-center h-[85vh] container mx-auto bg-slate-200 my-2">
             <div className="bg-white p-4 rounded-box border-base-300 border w-96">
